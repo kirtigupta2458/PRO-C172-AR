@@ -10,12 +10,16 @@ AFRAME.registerComponent("markerhandler", {
     this.el.addEventListener("markerFound", () => {
       if (uid !== null) {
         var markerId = this.el.id;
-        this.handleMarkerFound(toys, markerId);
+        // call handle marker found function
+        
+        
       }
     });
 
     this.el.addEventListener("markerLost", () => {
-      this.handleMarkerLost();
+      //call handle marker lost function
+      
+      
     });
   },
   askUserId: function() {
@@ -128,13 +132,11 @@ AFRAME.registerComponent("markerhandler", {
       });
   },
   getToys: async function() {
-    return await firebase
-      .firestore()
-      .collection("toys")
-      .get()
-      .then(snap => {
-        return snap.docs.map(doc => doc.data());
-      });
+    // get toys from database 
+    
+    
+    
+    
   },
   getorderSummary: async function(uid) {
     return await firebase
@@ -183,31 +185,13 @@ AFRAME.registerComponent("markerhandler", {
       tableBodyTag.appendChild(tr);
     });
 
-    var totalTr = document.createElement("tr");
-
-    var td1 = document.createElement("td");
-    td1.setAttribute("class", "no-line");
-
-    var td2 = document.createElement("td");
-    td1.setAttribute("class", "no-line");
-
-    var td3 = document.createElement("td");
-    td1.setAttribute("class", "no-line text-cente");
-
-    var strongTag = document.createElement("strong");
-    strongTag.innerHTML = "Total";
-    td3.appendChild(strongTag);
-
-    var td4 = document.createElement("td");
-    td1.setAttribute("class", "no-line text-right");
-    td4.innerHTML = "$" + orderSummary.total_bill;
-
-    totalTr.appendChild(td1);
-    totalTr.appendChild(td2);
-    totalTr.appendChild(td3);
-    totalTr.appendChild(td4);
-
-    tableBodyTag.appendChild(totalTr);
+    //create totaltr row just as in class project 
+    
+    
+    
+    
+    
+    
   },
   handlePayment: function() {
     // Close Modal

@@ -12,9 +12,17 @@ AFRAME.registerComponent("createbuttons", {
     button2.setAttribute("id", "order-summary-button");
     button2.setAttribute("class", "btn btn-danger ml-3");
 
-    // 3. Append somewhere
+   
     var buttonDiv = document.getElementById("button-div");
-    buttonDiv.appendChild(button2);
-    buttonDiv.appendChild(button1);
+    
+    
+    
+     // 3. Append buttons to buttonDiv
+    
+    
+    
+    
+    
+    
   }
 });

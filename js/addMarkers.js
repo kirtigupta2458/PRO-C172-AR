@@ -113,12 +113,12 @@ AFRAME.registerComponent("createmarkers", {
     });
   },
   getAllToys: async function() {
-    return await firebase
-      .firestore()
-      .collection("toys")
-      .get()
-      .then(snap => {
-        return snap.docs.map(doc => doc.data());
-      });
+    //get the toys from the database and return them
+    
+    
+    
+    
+    
+    
   }
 });
